@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Loan Calculator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            #loading,
+            #results {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body text-center mt-5">
+                        <h1 class="heading display-5 pb-3">Title</h1>
+                        <form id="loan-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </span>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="amount"
+                                        placeholder="Loan Amount"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
+                                    </span>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="interest"
+                                        placeholder="Interest"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="years"
+                                        placeholder="Years to repay"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Calculate" class="btn btn-dark" />
+                            </div>
+                        </form>
+                        <!-- LOADER HERE -->
+                        <div id="loading">
+                            <img
+                                src="https://icon-library.net//images/loading-icon-png/loading-icon-png-28.jpg"
+                                width="100px"
+                            />
+                        </div>
+                        <!-- RESULTS -->
+                        <div id="results" class="pt-4">
+                            <h5>Results</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">Monthly Payment</span>
+                                    </span>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="monthly-payment"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">Total Payment</span>
+                                    </span>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="total-payment"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">Total Interest</span>
+                                    </span>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="total-interest"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
